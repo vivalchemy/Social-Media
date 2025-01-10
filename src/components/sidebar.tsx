@@ -1,4 +1,4 @@
-import { BarChart3, Home, icons, Users, Bot } from 'lucide-react'
+import { BarChart3, Home, Bot } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"

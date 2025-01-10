@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Card,
   CardContent,
@@ -132,7 +131,7 @@ const Analytics= ({data}: {data: AnalyticsData | undefined}) => {
                   outerRadius={100}
                   label
                 >
-                  {postTypeData.map((entry, index) => (
+                  {postTypeData.map((index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

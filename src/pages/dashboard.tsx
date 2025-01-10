@@ -23,7 +23,7 @@ export interface ResponseData {
 export function Dashboard({response}: {response: ResponseData | undefined}) {
   console.log(response)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [error,] = useState<string | null>(null)
   
   useEffect(() => {
     if (response) {
