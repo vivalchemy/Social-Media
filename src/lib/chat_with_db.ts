@@ -209,7 +209,7 @@ async function processMessage(inputText: string): Promise<string> {
         if (response?.outputs?.[0]?.outputs?.[0]?.results?.message?.data?.text) {
             const outputText = response.outputs[0].outputs[0].results.message.data.text;
             // Remove the markdown code block syntax and extra newlines
-            const cleanedText = outputText.replace(/```\(\w*\)?\n?/g, '').trim();
+            const cleanedText = outputText.replace(/```/g, '').replace(/json/g,'').trim();
             console.log("Output received:", cleanedText);
             return cleanedText;
         }

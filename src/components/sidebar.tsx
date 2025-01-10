@@ -16,11 +16,6 @@ const sidebarNavItems = [
     href: "/analytics",
   },
   {
-    title: "Audience",
-    icon: Users,
-    href: "/audience",
-  },
-  {
     // chatbot
     title: "Chatbot",
     icon: Bot,
