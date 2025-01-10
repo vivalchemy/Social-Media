@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Send } from 'lucide-react';
 import ReactMarkdown from "react-markdown";
+import { processMessage } from '@/lib/chat_with_db';
 
 interface ChatMessage {
   sender: 'user' | 'bot';
@@ -26,7 +27,7 @@ export function Chatbot() {
       const userMessage: ChatMessage = { sender: 'user', message: inputMessage };
       setChatMessages([...chatMessages, userMessage]);
 
-      const botMessage: ChatMessage = { sender: 'bot', message: "This is an ai generated response" };
+      const botMessage: ChatMessage = { sender: 'bot', message: await processMessage(inputMessage) };
       setChatMessages((prevMessages) => [...prevMessages, botMessage]);
       setInputMessage('');
     }
