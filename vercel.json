@@ -1,5 +1,6 @@
 {
     "rewrites": [
+        {"source": "/lf(.*)", "destination": "https://api.langflow.astra.datastax.com"},
         {"source": "/(.*)", "destination": "/"}
     ]
 }
