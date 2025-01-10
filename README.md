@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Sociopath: Unlocking Social Media Insights with Data-Driven Analytics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Sociopath** is a basic analytics module for analyzing engagement data from mock social media accounts. The project aims to evaluate social media post performance by analyzing engagement metrics like likes, shares, and comments. It uses Langflow for workflow automation, DataStax Astra DB for database operations, and GPT integration for generating insights.
 
-Currently, two official plugins are available:
+## Collaborators
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vivian Ludrick
+- Badal Singh
+- Ronit Naik
 
-## Expanding the ESLint configuration
+## License
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project is licensed under the MIT License.
 
-- Configure the top-level `parserOptions` property like this:
+## Tools & Technologies
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React** (with Shadcn)
+- **TypeScript**
+- **Vite**
+- **Recharts** (for data visualization)
+- **DataStax Astra DB** (for database operations)
+- **Langflow** (for workflow creation and GPT integration)
+- **Gemini Integration** (for generating insights)
+
+## Features
+
+1. **Fetch Engagement Data**: Simulated dataset for social media engagement (likes, shares, comments, post types).
+2. **Post Performance Analysis**: Calculate average engagement metrics for different post types (carousel, reels, static images).
+3. **Insight Generation**: Use GPT to generate simple insights based on the analysis (e.g., which post type performs better).
+
+## Installation & Setup
+
+### Prerequisites
+
+Ensure that you have the following tools installed:
+
+- **Node.js** (v16.x or higher)
+- **npm** (or yarn)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/sociopath.git
+cd sociopath
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Set Up DataStax Astra DB
+
+1. Create an account on [DataStax Astra](https://astra.datastax.com/).
+2. Create a new database and get the connection credentials.
+3. Store the connection credentials in your `.env` file (or use any other method to securely load them).
+
+### 4. Set Up Langflow and GPT
+
+1. Set up Langflow as per the [documentation](https://docs.langflow.com/).
+2. Integrate GPT for generating insights by following the guide in Langflow's setup.
+
+### 5. Run the Development Server
+
+```bash
+npm run dev
+```
+
+## Video Demonstration
+
+[Link to YouTube video showing Langflow workflow, DataStax usage, and GPT insights]
+
+## Contribution
+
+Feel free to open issues or submit pull requests if you'd like to contribute to the project.
+
+---
+
+MIT License © [Your Name or Your Team Name]
