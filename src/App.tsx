@@ -286,7 +286,7 @@ const analyticsPrompt = `
 `
 
 const App = () => {
-  const [error, setError] = useState<string | null>(null)
+  const [, setError] = useState<string | null>(null)
   const [dashboardResponse, setdashboardResponse] = useState<ResponseData>();
   const [analyticsResponse, setAnalyticsResponse ] = useState<AnalyticsData>();
 
@@ -296,10 +296,10 @@ const App = () => {
         const dashboardResponsemsg = await processMessage(dashboardPrompt);
         setdashboardResponse(JSON.parse(dashboardResponsemsg));
        
-        // const analyticsResponsemsg = await processMessage(analyticsPrompt);
-        // analyticsResponsemsg.replace(/```\(\w*\)?\n?/g, '').trim();
-        // console.log(analyticsResponsemsg)
-        // setAnalyticsResponse(JSON.parse(analyticsResponsemsg));
+        const analyticsResponsemsg = await processMessage(analyticsPrompt);
+        analyticsResponsemsg.replace(/```\(\w*\)?\n?/g, '').trim();
+        console.log(analyticsResponsemsg)
+        setAnalyticsResponse(JSON.parse(analyticsResponsemsg));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred')
       }
@@ -307,19 +307,19 @@ const App = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const analyticsResponsemsg = await processMessage(analyticsPrompt);
-        console.log(analyticsResponsemsg)
-        setAnalyticsResponse(JSON.parse(analyticsResponsemsg));
-        // setData(JSON.parse(response))
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred')
-      }
-    }
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const analyticsResponsemsg = await processMessage(analyticsPrompt);
+  //       console.log(analyticsResponsemsg)
+  //       setAnalyticsResponse(JSON.parse(analyticsResponsemsg));
+  //       // setData(JSON.parse(response))
+  //     } catch (err) {
+  //       setError(err instanceof Error ? err.message : 'An error occurred')
+  //     }
+  //   }
+  //   fetchData();
+  // }, []);
 
 
   const router = createBrowserRouter([
