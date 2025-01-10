@@ -65,76 +65,76 @@ For example the output can be like:
 }
 `
 
-const dummyData = {
-  analysis: {
-    total_interactions_per_platform: {
-      instagram: {
-        total_likes: 939,
-        total_shares: 432,
-        total_comments: 367,
-        total_interactions: 1738
-      },
-      facebook: {
-        total_likes: 931,
-        total_shares: 730,
-        total_comments: 474,
-        total_interactions: 2135
-      },
-      twitter: {
-        total_likes: 982,
-        total_shares: 691,
-        total_comments: 261,
-        total_interactions: 1934
-      },
-      youtube: {
-        total_likes: 139,
-        total_shares: 13,
-        total_comments: 160,
-        total_interactions: 312
-      }
-    },
-    distribution_of_interactions_by_post_type: {
-      image: {
-        total_likes: 887,
-        total_shares: 483,
-        total_comments: 493,
-        total_interactions: 1863
-      },
-      carousel: {
-        total_likes: 1460,
-        total_shares: 727,
-        total_comments: 286,
-        total_interactions: 2473
-      },
-      text: {
-        total_likes: 644,
-        total_shares: 656,
-        total_comments: 553,
-        total_interactions: 1853
-      }
-    },
-    average_interactions_per_user: {
-      user1: {
-        average_likes: 279,
-        average_shares: 232,
-        average_comments: 203,
-        average_total_interactions: 714
-      },
-      user2: {
-        average_likes: 597,
-        average_shares: 278,
-        average_comments: 226,
-        average_total_interactions: 1101
-      },
-      user3: {
-        average_likes: 711,
-        average_shares: 363,
-        average_comments: 151,
-        average_total_interactions: 1225
-      }
-    }
-  }
-};
+// const dummyData = {
+//   analysis: {
+//     total_interactions_per_platform: {
+//       instagram: {
+//         total_likes: 939,
+//         total_shares: 432,
+//         total_comments: 367,
+//         total_interactions: 1738
+//       },
+//       facebook: {
+//         total_likes: 931,
+//         total_shares: 730,
+//         total_comments: 474,
+//         total_interactions: 2135
+//       },
+//       twitter: {
+//         total_likes: 982,
+//         total_shares: 691,
+//         total_comments: 261,
+//         total_interactions: 1934
+//       },
+//       youtube: {
+//         total_likes: 139,
+//         total_shares: 13,
+//         total_comments: 160,
+//         total_interactions: 312
+//       }
+//     },
+//     distribution_of_interactions_by_post_type: {
+//       image: {
+//         total_likes: 887,
+//         total_shares: 483,
+//         total_comments: 493,
+//         total_interactions: 1863
+//       },
+//       carousel: {
+//         total_likes: 1460,
+//         total_shares: 727,
+//         total_comments: 286,
+//         total_interactions: 2473
+//       },
+//       text: {
+//         total_likes: 644,
+//         total_shares: 656,
+//         total_comments: 553,
+//         total_interactions: 1853
+//       }
+//     },
+//     average_interactions_per_user: {
+//       user1: {
+//         average_likes: 279,
+//         average_shares: 232,
+//         average_comments: 203,
+//         average_total_interactions: 714
+//       },
+//       user2: {
+//         average_likes: 597,
+//         average_shares: 278,
+//         average_comments: 226,
+//         average_total_interactions: 1101
+//       },
+//       user3: {
+//         average_likes: 711,
+//         average_shares: 363,
+//         average_comments: 151,
+//         average_total_interactions: 1225
+//       }
+//     }
+//   }
+// };
 
 const analyticsPrompt = `
 > "Please analyze the provided dataset and generate the following summaries in a structured JSON format that I can use to create charts:

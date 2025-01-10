@@ -131,7 +131,7 @@ const Analytics= ({data}: {data: AnalyticsData | undefined}) => {
                   outerRadius={100}
                   label
                 >
-                  {postTypeData.map((index) => (
+                  {postTypeData.map((_,index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>

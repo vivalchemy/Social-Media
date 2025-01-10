@@ -42,6 +42,9 @@ interface LangflowResponse {
                     text: string;
                 };
             };
+            artifacts:{
+                stream_url: string;
+            };
             outputs: {
                 message: {
                     message: MessageData;
@@ -158,7 +161,7 @@ class LangflowClient {
                 onClose && 
                 onError
             ) {
-                const streamUrl = initResponse.outputs[0].outputs[0].artifacts.stream_url;
+                const streamUrl = initResponse.outputs[0].outputs[0].artifacts?.stream_url;
                 console.log(`Streaming from: ${streamUrl}`);
                 this.handleStream(streamUrl, onUpdate, onClose, onError);
             }
