@@ -26,10 +26,10 @@ export function Chatbot() {
     if (inputMessage.trim()) {
       const userMessage: ChatMessage = { sender: 'user', message: inputMessage };
       setChatMessages([...chatMessages, userMessage]);
+      setInputMessage('');
 
       const botMessage: ChatMessage = { sender: 'bot', message: await processMessage(inputMessage) };
       setChatMessages((prevMessages) => [...prevMessages, botMessage]);
-      setInputMessage('');
     }
   };
 

@@ -176,8 +176,8 @@ class LangflowClient {
 async function processMessage(inputText: string): Promise<string> {
     console.log('Processing message:', inputText);
 
-    const flowIdOrName = 'a01fc13a-c599-4e87-9254-d8357daa448e';
-    const langflowId = '2656f5f9-a7ab-408c-ad16-143b772c94e8';
+    const flowIdOrName = 'f47fb1a3-e12e-45f2-a387-09cb29695f85';
+    const langflowId = '15be5860-2f15-4bc4-9eb2-583bafd47a34';
     const applicationToken = import.meta.env.VITE_ASTRA_APP_TOKEN as string;
     
     const langflowClient = new LangflowClient(
