@@ -1,5 +1,19 @@
 {
-    "rewrites": [
-        {"source": "/lf/:path*", "destination": "https://api.langflow.astra.datastax.com/:path*"}
-    ]
+  "routes": [
+    {
+      "src": "/lf*",
+      "dest": "https://api.langflow.astra.datastax.com*",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "PATCH",
+        "OPTIONS"
+      ],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
 }
